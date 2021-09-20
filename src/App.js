@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Card from './components/Card';
+import ImageCard from './components/Card';
 import './App.css';
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     {loading ? 
       <h2>Loading</h2>
     :
-      <Card title={data.title} url={data.url} />
+      <ImageCard title={data.title} url={data.url} explanation={data.explanation} />
     }
     </div>
   );
