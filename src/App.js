@@ -22,22 +22,18 @@ function App() {
   }, [])
 
   return (
-    <div>
-    
-    <Header />
-
-    {loading ? 
-      <h1 style={{textAlign: "center", marginTop: "2rem"}}>Getting ready for launch! 🚀</h1>
-    : (
-      <>
-        <ImageCardContainer apods={apods} />
-        <Footer />
-      </>
-      )
-    }
-
-
-    </div>
+    <>
+      <Header />
+      {loading ? 
+        <h1 style={{textAlign: "center", marginTop: "2rem"}}>Getting ready for launch! 🚀</h1>
+      : (
+        <>
+          <ImageCardContainer apods={apods} />
+          <Footer />
+        </>
+        )
+      }
+    </>
   );
 }
 
