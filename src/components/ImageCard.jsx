@@ -13,7 +13,7 @@ const ImageCard = ({title, url, explanation}) => {
   }
 
   return (
-    <Card sx={{width: 400, margin: 2, height: "auto" }}>
+    <Card sx={{width: 500, margin: 2 }}>
       
       <CardMedia
         component="img"
@@ -22,8 +22,8 @@ const ImageCard = ({title, url, explanation}) => {
         alt={title}
       />
 
-      <CardContent sx={{p:1, height: "fitContent"}}>
-        <h2>{title}</h2>
+      <CardContent sx={{p:2}}>
+        <h3>{title}</h3>
         <p>{explanation}</p>
       </CardContent>
 
