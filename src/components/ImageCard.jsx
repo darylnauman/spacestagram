@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import LikeButton from "./LikeButton";
 
-const ImageCard = ({title, url, explanation}) => {
+const ImageCard = ({title, url, explanation, date}) => {
   
   const [isLiked, setIsLiked] = useState(false);
   
@@ -17,13 +17,14 @@ const ImageCard = ({title, url, explanation}) => {
       
       <CardMedia
         component="img"
-        height="200"
+        height="300"
         image={url}
         alt={title}
       />
 
-      <CardContent sx={{p:2}}>
+      <CardContent sx={{px:3}}>
         <h3>{title}</h3>
+        <p>{date}</p>
         <p>{explanation}</p>
       </CardContent>
 

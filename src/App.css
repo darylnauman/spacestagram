@@ -1,3 +1,7 @@
+html {
+  font-family: 'Chakra Petch', sans-serif;
+}
+
 body {
   background: #eee;
   background-image: url("/src/assets/images/cubes.png");
