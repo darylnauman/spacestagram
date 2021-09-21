@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
@@ -11,13 +11,9 @@ const ImageCard = ({title, url, explanation}) => {
   const handleClick = () => {
     setIsLiked(!isLiked);
   }
-  
-  useEffect(()=> {
-    console.log(isLiked)
-  }, [isLiked])
 
   return (
-    <Card sx={{maxWidth: 400, margin: 2}}>
+    <Card sx={{width: 400, margin: 2, height: "auto" }}>
       
       <CardMedia
         component="img"
@@ -26,7 +22,7 @@ const ImageCard = ({title, url, explanation}) => {
         alt={title}
       />
 
-      <CardContent sx={{p:1}}>
+      <CardContent sx={{p:1, height: "fitContent"}}>
         <h2>{title}</h2>
         <p>{explanation}</p>
       </CardContent>

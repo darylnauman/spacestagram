@@ -1,17 +1,16 @@
 import React, {useState, useEffect} from 'react';
-import ImageCard from './components/Card';
+import ImageCardContainer from './components/ImageCardContainer';
 import './App.css';
 
 function App() {
-  
-  const [data, setData] = useState();
+
+  const [apods, setApods] = useState([]);
   const [loading, setLoading] = useState(true);
   
   const fetchData = () => {
-    fetch("https://api.nasa.gov/planetary/apod?api_key=ErAT25DgRegQM8Gb3QHrGaVGFAi1qzINicHj2xrw")
+    fetch("https://api.nasa.gov/planetary/apod?count=3&api_key=ErAT25DgRegQM8Gb3QHrGaVGFAi1qzINicHj2xrw")
     .then(response => response.json())
-    // .then((data) => console.log(data.title))
-    .then(setData)
+    .then(data => setApods(data))
     .then(()=>setLoading(false))
     .catch(error => console.error(error))
   }
@@ -24,8 +23,8 @@ function App() {
     <div>
     {loading ? 
       <h2>Loading</h2>
-    :
-      <ImageCard title={data.title} url={data.url} explanation={data.explanation} />
+    : 
+      <ImageCardContainer apods={apods} />
     }
     </div>
   );

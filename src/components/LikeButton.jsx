@@ -11,9 +11,9 @@ const LikeButton = ({onLike, isLiked}) => {
     <Box sx={{mx: 'auto', textAlign: 'right', p:0}}>
       <IconButton onClick={onLike} aria-label="add to favorites">
         {isLiked ?
-        <FavoriteIcon sx={{color: "Red"}} fontSize="large"/>
+        <FavoriteIcon sx={{color: "Red", pr:1, pb:1}} fontSize="large"/>
         :
-        <FavoriteBorderIcon sx={{color: "Red"}} fontSize="large"/>
+        <FavoriteBorderIcon sx={{color: "Red", pr:1, pb:1}} fontSize="large"/>
         }
       </IconButton>
   </Box>
