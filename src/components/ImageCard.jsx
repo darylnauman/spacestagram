@@ -25,7 +25,7 @@ const ImageCard = ({title, url, explanation, date}) => {
       <CardContent sx={{px:3, height:"55%"}}>
         <h3>{title}</h3>
         <p>{date}</p>
-        <span>{explanation}</span>
+        <p>{explanation}</p>
       </CardContent>
 
       <LikeButton sx={{height:"10%"}} onLike={handleClick} isLiked={isLiked}/>
