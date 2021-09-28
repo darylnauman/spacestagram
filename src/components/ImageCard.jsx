@@ -17,15 +17,15 @@ const ImageCard = ({title, url, explanation, date}) => {
       
       <CardMedia
         component="img"
-        height="50%"
+        height="35%"
         image={url}
         alt={title}
       />
 
-      <CardContent sx={{px:3, height:"40%"}}>
+      <CardContent sx={{px:3, height:"55%"}}>
         <h3>{title}</h3>
         <p>{date}</p>
-        <p>{explanation}</p>
+        <span>{explanation}</span>
       </CardContent>
 
       <LikeButton sx={{height:"10%"}} onLike={handleClick} isLiked={isLiked}/>
