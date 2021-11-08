@@ -6,7 +6,7 @@ const Footer = () => {
   
   return (
     <footer style={{textAlign: "center"}}> 
-      <p>Build with the use of NASA's Astronomy Picture of the Day API service.</p>
+      <p>Built with the use of NASA's Astronomy Picture of the Day API service.</p>
       <p>Created by Daryl Nauman</p>
       <p>Copyright &#169; {currentYear}</p>
     </footer>
