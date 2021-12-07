@@ -9,8 +9,9 @@ function App() {
   const [apods, setApods] = useState([]);
   const [loading, setLoading] = useState(true);
   
+  
   const fetchData = () => {
-    fetch("https://api.nasa.gov/planetary/apod?count=6&api_key=ErAT25DgRegQM8Gb3QHrGaVGFAi1qzINicHj2xrw")
+    fetch(`https://api.nasa.gov/planetary/apod?count=6&api_key=${process.env.REACT_APP_NASA_API_KEY}`)
     .then(response => response.json())
     .then(data => setApods(data))
     .then(()=>setLoading(false))
